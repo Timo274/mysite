@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Asset Not Found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center;">
+
+  <div class="bg-gradient"></div>
+
+  <div class="container reveal">
+    <div style="margin-bottom: 24px;">
+      <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color: var(--accent-color);">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+      </svg>
+    </div>
+    <h1 class="hero-name" style="font-size: 3rem; margin-bottom: 16px;">404</h1>
+    <p class="hero-tagline" style="font-size: 1.25rem; margin-bottom: 32px;">Asset Not Found</p>
+    <p class="hero-about" style="max-width: 500px; margin: 0 auto 40px auto;">
+      The page you are looking for has been moved, deleted, or does not exist. 
+      Please double-check the URL or return to the main portfolio.
+    </p>
+    <a href="/" class="btn-primary">Return to Portfolio</a>
+  </div>
+
+  <script>
+    // Reveal animation
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    });
+    
+    // Theme setup based on local storage
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme") || (prefersDarkScheme.matches ? "dark" : "light");
+    if (currentTheme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  </script>
+</body>
+</html>
