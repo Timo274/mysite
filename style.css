@@ -390,6 +390,26 @@ section {
   background-color: rgba(96, 165, 250, 0.1);
 }
 
+.project-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.project-chart {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.project-chart:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
 /* Skills Section */
 .section-header {
   margin-bottom: 64px;
