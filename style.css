@@ -218,19 +218,28 @@ body {
   color: var(--accent-color);
 }
 
-.nav-cta {
+.nav-links a.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--text-primary);
   color: var(--bg-color) !important;
-  padding: 10px 20px;
+  padding: 10px 24px;
   border-radius: 6px;
   font-weight: 600 !important;
   font-size: 1rem;
+  line-height: 1.2;
   transition: var(--transition);
 }
 
-.nav-cta:hover {
+.nav-links a.nav-cta::after {
+  display: none;
+}
+
+.nav-links a.nav-cta:hover {
   background: var(--accent-color);
   color: #fff !important;
+  transform: translateY(-1px);
 }
 
 /* Theme Toggle Button */
