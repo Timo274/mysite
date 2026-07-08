@@ -86,15 +86,7 @@ body {
   animation: pulseBg 15s ease-in-out infinite;
 }
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
+
 
 #scroll-svg {
   position: fixed;
@@ -177,8 +169,8 @@ body {
 }
 
 .nav-logo-img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--card-border);
@@ -229,9 +221,10 @@ body {
 .nav-cta {
   background: var(--text-primary);
   color: var(--bg-color) !important;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 6px;
   font-weight: 600 !important;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
